@@ -56,18 +56,22 @@
 	</tr><tr  class="trBR trBRBeforeErrMessage">
 		<td  class="tcBRBeforeErrMessage"><br></td>
 	</tr><tr class="trErrMessage">
-		<td  class="tcErrMessage"><span  class="messagelabel lblErrMessage"></span></td>
+		<td  class="tcErrMessage"><span id="errorMsg"  class="messagelabel lblErrMessage"></span></td>
 	</tr>
 </tbody></table>
 </div>
                     </div>
-                    <script src="validate.js"></script>
+                    <script src="js/validate.js"></script>
                     <script type="text/javascript">
                     var submit = function()
                     {
                     	var answer1 = document.getElementById("tbAnswer1").value;
                     	var answer2 = document.getElementById("tbAnswer2").value;
-                    	validate(answer1, answer2);
+                    	var isValid = validate(answer1, answer2);
+                    	if(isValid)
+                    		document.getElementById("errorMsg").innerHTML = "valid"
+                    	else
+                    		document.getElementById("errorMsg").innerHTML = "in valid"
                     }
                     </script>
 </body>
