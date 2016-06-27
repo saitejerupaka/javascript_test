@@ -8,9 +8,20 @@ grunt.initConfig({
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '*.html'
+          '*.html',
+          'validate.js',
+          'styles.css'
         ]
+      },
+      karma: {
+        files: ['js/*.js', 'tests/*.js'],
+        tasks: ['karma:unit'] //NOTE the :run flag
       }
+  },
+  karma: {
+  unit: {
+      configFile: 'karma.conf.js'
+    }
   },
   connect: {
       options: {
@@ -30,6 +41,7 @@ grunt.initConfig({
    
 });
 grunt.loadNpmTasks('grunt-open');
+grunt.loadNpmTasks('grunt-karma');
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-watch');
 
