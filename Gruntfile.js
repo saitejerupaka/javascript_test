@@ -20,7 +20,7 @@ grunt.initConfig({
   },
   karma: {
   unit: {
-      configFile: 'karma.conf.js'
+    configFile: 'karma.conf.js'
     }
   },
   connect: {
@@ -29,7 +29,13 @@ grunt.initConfig({
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729,
-        open: 'http://localhost:9000/security.html', // target url to open
+        base: {
+          path: '.',
+          options: {
+            index: 'security.html',
+            maxAge: 300000
+          }
+        }
       },
       livereload: {
         options: {
