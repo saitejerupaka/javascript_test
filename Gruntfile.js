@@ -9,7 +9,7 @@ grunt.initConfig({
         },
         files: [
           '*.html',
-          'validate.js',
+          'js/validate.js',
           'styles.css'
         ]
       },

@@ -7,19 +7,26 @@
     "test": "tests"
   },
   "dependencies": {
-    "bower": "^1.7.9",
-    "karma": "^1.1.0"
+    "bower": "^1.7.9"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "grunt-karma": "^2.0.0",
+    "istanbul": "^0.4.4",
+    "karma": "^1.1.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
+    "karma-clear-screen-reporter": "^1.0.0",
     "karma-cli": "^1.0.1",
+    "karma-coverage": "^1.1.0",
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.0.4",
     "karma-phantomjs-launcher": "^1.0.1",
-    "mocha": "^2.5.3"
+    "karma-sinon": "^1.0.5",
+    "karma-sinon-chai": "^1.2.3",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
   },
   "scripts": {
     "test": "karma start"
